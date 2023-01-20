@@ -1,0 +1,39 @@
+-Mobile
+
+    -Inscription
+
+    post
+    localhost:8080/enchere/inscription
+
+    -Login
+
+    post
+    localhost:8080/enchere/login
+
+    -Ajouter une enchère
+
+    post
+    localhost:8080/enchere/encheres
+
+    -Recharger Solde
+
+    post
+    localhost:8080/enchere/solde
+
+    -Voir la liste de ses enchères et leur statuts
+
+    get
+    localhost:8080/enchere/encheres/{id}
+
+    -Voir liste/fiche des enchères
+
+    get
+    localhost:8080/enchere/encheres
+
+    -Renchérir
+
+    post
+    localhost:8080/enchere/rencherir
+
+    
+-FrontOffice
