@@ -26,7 +26,7 @@ import com.ws.crud.payload.request.Recharger;
 import com.ws.crud.repository.RechargementRepository;
 import com.ws.crud.repository.UsersRepository;
 
-@CrossOrigin(origins = { "http://localhost", "http://localhost:3000", "https://celebrated-zuccutto-82b407.netlify.app" })
+@CrossOrigin(origins = { "http://localhost", "http://localhost:3000", "https://heartfelt-horse-fa1258.netlify.app" })
 @RestController
 @RequestMapping("/enchere/")
 public class UsersController {

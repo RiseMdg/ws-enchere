@@ -28,7 +28,7 @@ import com.ws.crud.payload.response.Statistique;
 import com.ws.crud.repository.EnchereRepository;
 import com.ws.crud.repository.MiseRepository;
 
-@CrossOrigin(origins = { "http://localhost", "http://localhost:3000", "https://celebrated-zuccutto-82b407.netlify.app" })
+@CrossOrigin(origins = { "http://localhost", "http://localhost:3000", "https://heartfelt-horse-fa1258.netlify.app" })
 @RestController
 @RequestMapping("/admin/stat/")
 public class StatController {

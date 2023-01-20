@@ -31,7 +31,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
 @CrossOrigin(origins = { "http://localhost", "http://localhost:3000",
-        "https://celebrated-zuccutto-82b407.netlify.app" })
+        "https://heartfelt-horse-fa1258.netlify.app" })
 @RestController
 @RequestMapping("/admin/")
 public class AdminController {

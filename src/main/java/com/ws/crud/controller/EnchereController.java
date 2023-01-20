@@ -32,7 +32,7 @@ import com.ws.crud.repository.EnchereRepository;
 import com.ws.crud.repository.ImageRepository;
 
 @CrossOrigin(origins = { "http://localhost", "http://localhost:3000",
-		"https://celebrated-zuccutto-82b407.netlify.app" })
+		"https://heartfelt-horse-fa1258.netlify.app" })
 @RestController
 @RequestMapping("/enchere/")
 public class EnchereController {

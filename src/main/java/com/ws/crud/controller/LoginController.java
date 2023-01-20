@@ -24,7 +24,7 @@ import com.ws.crud.repository.UsersRepository;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
-@CrossOrigin(origins = { "http://localhost", "http://localhost:3000" })
+@CrossOrigin(origins = { "http://localhost", "http://localhost:3000", "https://heartfelt-horse-fa1258.netlify.app" })
 @RestController
 @RequestMapping("/enchere/")
 public class LoginController {

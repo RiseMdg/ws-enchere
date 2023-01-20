@@ -23,7 +23,7 @@ import com.ws.crud.exception.ResourceNotFoundException;
 import com.ws.crud.model.Category;
 import com.ws.crud.repository.CategoryRepository;
 
-@CrossOrigin(origins = { "http://localhost", "http://localhost:3000", "https://celebrated-zuccutto-82b407.netlify.app" })
+@CrossOrigin(origins = { "http://localhost", "http://localhost:3000", "https://heartfelt-horse-fa1258.netlify.app" })
 @RestController
 @RequestMapping("/enchere/")
 public class CategoryController {
