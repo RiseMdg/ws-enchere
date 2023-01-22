@@ -14,4 +14,7 @@ public interface MiseRepository extends JpaRepository<Mise, Long>{
 
     @Query(value="Select prixminimal from enchere where id = ?1",nativeQuery = true)
     double prixMinimal(int enchere_id);
+
+    @Query(value="select MAX(prixmise) from mise where enchere_id = ?1",nativeQuery = true)
+    double miseMax(int enchere_id);
 }

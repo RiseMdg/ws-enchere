@@ -37,18 +37,22 @@ public class MiseController {
 		return assurance;
 	}
 
-
 	// save mise
 
 	@PostMapping("/rencherir")
 	public String rencherir(@RequestBody Rencherir rencherir) {
 		double prixMinimal = miseRepository.prixMinimal(rencherir.getEnchere_id());
-		if((double) rencherir.getPrixmise() < prixMinimal){
-			return "Le prix minimal est de " + prixMinimal;
-		}else{
+		double one = 1;
+		double miseMax = miseRepository.miseMax(rencherir.getEnchere_id());
+		if ((double) rencherir.getPrixmise() <= prixMinimal) {
+			return "Le Mise minimal est de " + prixMinimal;
+		} else if ((double) rencherir.getPrixmise() <= miseMax) {
+			double min = miseMax + one;
+			return "Le Mise minimal est de " + min;
+		} else {
 			Mise mise = new Mise(rencherir.getPrixmise(), rencherir.getUser_id(), rencherir.getEnchere_id());
 			miseRepository.save(mise);
-			return "rencherir succcess";
+			return "rencherir succcess " + miseMax;
 		}
 	}
 
