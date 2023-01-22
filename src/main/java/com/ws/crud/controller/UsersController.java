@@ -23,6 +23,8 @@ import com.ws.crud.exception.ResourceNotFoundException;
 import com.ws.crud.model.Rechargement;
 import com.ws.crud.model.Users;
 import com.ws.crud.payload.request.Recharger;
+import com.ws.crud.payload.request.UserId;
+import com.ws.crud.payload.response.Solde;
 import com.ws.crud.repository.RechargementRepository;
 import com.ws.crud.repository.UsersRepository;
 
@@ -50,6 +52,16 @@ public class UsersController {
 		System.out.println("Montant : " + recharger.getSolde());
 		rechargementRepository.save(rechargement);
 		return "Successfull";
+	}
+
+	@GetMapping("/checkSolde")
+	public Solde checkSolde(HttpServletRequest request, @RequestBody UserId userId) {
+		// long int_user_id = (long) request.getSession().getAttribute("user_id");
+		// int user_id = (int) int_user_id;
+		// System.out.println("User Id : " + user_id);
+		Solde solde = new Solde();
+		solde.setSolde(usersRepository.solde(userId.getUser_id()));
+		return solde;
 	}
 
 	// get userss

@@ -26,4 +26,7 @@ public interface UsersRepository extends JpaRepository<Users, Long>{
     @Transactional
     @Modifying
     void recharger(double montant,int user_id);
+
+    @Query(value="select solde from users where id = ?1",nativeQuery = true)
+    double solde(int user_id);
 }
