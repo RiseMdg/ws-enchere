@@ -41,9 +41,15 @@ public class MiseController {
 	// save mise
 
 	@PostMapping("/rencherir")
-	public Mise rencherir(@RequestBody Rencherir rencherir) {
-		Mise mise = new Mise(rencherir.getPrixmise(), rencherir.getUser_id(), rencherir.getEnchere_id());
-		return miseRepository.save(mise);
+	public String rencherir(@RequestBody Rencherir rencherir) {
+		double prixMinimal = miseRepository.prixMinimal(rencherir.getEnchere_id());
+		if((double) rencherir.getPrixmise() < prixMinimal){
+			return "Le prix minimal est de " + prixMinimal;
+		}else{
+			Mise mise = new Mise(rencherir.getPrixmise(), rencherir.getUser_id(), rencherir.getEnchere_id());
+			miseRepository.save(mise);
+			return "rencherir succcess";
+		}
 	}
 
 	// get mises by user_id

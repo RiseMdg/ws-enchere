@@ -11,4 +11,7 @@ import com.ws.crud.model.Mise;
 public interface MiseRepository extends JpaRepository<Mise, Long>{
     @Query(value="Select * from mise where user_id = ?1",nativeQuery = true)
     List<Mise> miseByUser_id(long user_id);
+
+    @Query(value="Select prixminimal from enchere where id = ?1",nativeQuery = true)
+    double prixMinimal(int enchere_id);
 }
