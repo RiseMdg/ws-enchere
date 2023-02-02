@@ -58,7 +58,7 @@ public class MiseController {
 
 	// get mises by user_id
 
-	@GetMapping("misesbyuserid")
+	@PostMapping("misesbyuserid")
 	public List<Mise> getAllMiseByUserId(HttpServletRequest request, @RequestBody MiseByUserId miseByUserId) {
 		return this.miseRepository.miseByUser_id(miseByUserId.getUser_id());
 	}

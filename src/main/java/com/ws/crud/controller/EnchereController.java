@@ -77,7 +77,7 @@ public class EnchereController {
 	}
 	// get enchere by user_id
 
-	@GetMapping("encheresbyuserid")
+	@PostMapping("encheresbyuserid")
 	public List<Enchere> getAllEnchereByUserId(HttpServletRequest request,  @RequestBody EnchereByUserId enchereByUserId) {
 		List<Enchere> encheres = enchereRepository.enchereByUser_id(enchereByUserId.getUser_id());
 		List<Enchere> resultat = new ArrayList<>();

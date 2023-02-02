@@ -54,7 +54,7 @@ public class UsersController {
 		return "Successfull";
 	}
 
-	@GetMapping("/checkSolde")
+	@PostMapping("/checkSolde")
 	public Solde checkSolde(HttpServletRequest request, @RequestBody UserId userId) {
 		// long int_user_id = (long) request.getSession().getAttribute("user_id");
 		// int user_id = (int) int_user_id;
