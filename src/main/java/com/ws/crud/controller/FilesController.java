@@ -70,8 +70,9 @@ public class FilesController {
       List<String> fileNames = new ArrayList<>();
 
       Arrays.asList(files).stream().forEach(file -> {
+        String extension = file.getContentType().split("/")[1];
         String filenames = Long.toString(new Date().getTime() / 1000) + "."
-            + FilenameUtils.getExtension(file.getOriginalFilename());
+            + extension;
         storageService.save(file, filenames);
         Image image = new Image(filenames, (int) en.getId());
         fileNames.add(filenames);
