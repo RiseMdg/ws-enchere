@@ -34,7 +34,8 @@ import com.ws.crud.response.ResponseMessage;
 import com.ws.crud.service.FilesStorageService;
 
 @Controller
-@CrossOrigin("https://heartfelt-horse-fa1258.netlify.app")
+@CrossOrigin(origins = { "http://localhost", "http://localhost:3000",
+		"https://heartfelt-horse-fa1258.netlify.app" })
 public class FilesController {
 
   @Autowired
