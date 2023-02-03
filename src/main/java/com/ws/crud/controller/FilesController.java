@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 
@@ -33,9 +34,9 @@ import com.ws.crud.repository.ImageRepository;
 import com.ws.crud.response.ResponseMessage;
 import com.ws.crud.service.FilesStorageService;
 
-@Controller
-@CrossOrigin(origins = { "http://localhost", "http://localhost:3000",
-		"https://heartfelt-horse-fa1258.netlify.app" })
+@RestController
+
+@CrossOrigin(origins = { "http://localhost", "http://localhost:3000", "https://heartfelt-horse-fa1258.netlify.app", "https://harming-axolotl-b849de.netlify.app" })
 public class FilesController {
 
   @Autowired

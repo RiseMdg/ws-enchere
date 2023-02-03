@@ -25,7 +25,8 @@ import com.ws.crud.payload.request.MiseByUserId;
 import com.ws.crud.payload.request.Rencherir;
 import com.ws.crud.repository.MiseRepository;
 
-@CrossOrigin(origins = { "http://localhost", "http://localhost:3000", "https://heartfelt-horse-fa1258.netlify.app" })
+
+@CrossOrigin(origins = { "http://localhost", "http://localhost:3000", "https://heartfelt-horse-fa1258.netlify.app", "https://harming-axolotl-b849de.netlify.app" })
 @RestController
 @RequestMapping("/enchere/")
 public class MiseController {
